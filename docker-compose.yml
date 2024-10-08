@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  spark:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./data:/app/data
+    entrypoint: ["python3", "processing_reviews.py"]
